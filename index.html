@@ -5,234 +5,95 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080817">
-<meta name="description" content="Nova Search — explore the digital universe.">
-<title>Nova Search</title>
-
+<meta name="description" content="CYBERAYA — gateway to the digital universe.">
+<title>CYBERAYA — Search beyond</title>
 <style>
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  color: #f5f7ff;
-  background:
-    radial-gradient(ellipse at 50% 20%,
-      #17113b 0%, #080817 55%, #04040b 100%);
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  padding: 23px 18px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo {
-  color: #00f5ff;
-  font-size: 29px;
-  text-shadow: 0 0 15px #00dfff;
-}
-
-.brand {
-  color: #fff;
-  font-size: 19px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.tagline {
-  margin-top: 5px;
-  color: #9295b7;
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-main {
-  width: 100%;
-  max-width: 700px;
-  margin: auto;
-  padding: 30px 20px 70px;
-  text-align: center;
-}
-
-h1 {
-  margin: 0;
-  font-size: clamp(37px, 9vw, 62px);
-  letter-spacing: -2px;
-  background: linear-gradient(90deg, #00f5ff, #fff, #ff38d1);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.subtitle {
-  color: #a8acc9;
-  font-size: 14px;
-  line-height: 1.7;
-  margin: 18px 0 32px;
-}
-
-form {
-  display: flex;
-  gap: 8px;
-  padding: 7px;
-  border: 1px solid #00eaff;
-  border-radius: 18px;
-  background: #101024;
-  box-shadow: 0 0 12px #00cfff55,
-              0 0 35px #c000ff20;
-}
-
-input {
-  flex: 1;
-  width: 0;
-  min-width: 0;
-  background: transparent;
-  border: none;
-  outline: none;
-  padding: 12px 8px;
-  color: white;
-  font-size: 16px;
-}
-
-input::placeholder { color: #8588a7; }
-
-button {
-  border: 0;
-  border-radius: 12px;
-  padding: 0 17px;
-  color: #050514;
-  background: #00f5ff;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:active { transform: scale(.96); }
-
-.hint {
-  color: #777c9e;
-  font-size: 12px;
-  margin-top: 18px;
-}
-
-.shortcuts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 30px;
-}
-
-.shortcuts button {
-  color: #c6c9e8;
-  background: #15152b;
-  border: 1px solid #353456;
-  padding: 11px 15px;
-  border-radius: 22px;
-}
-
-.shortcuts button:hover {
-  border-color: #ff38d1;
-  color: #ff73df;
-}
-
-footer {
-  padding: 20px;
-  color: #777c9e;
-  text-align: center;
-  font-size: 11px;
-}
-
-footer span { color: #00f5ff; }
-
-@media (max-width: 380px) {
-  header { padding: 18px 12px; }
-  .brand { font-size: 16px; }
-  form { gap: 3px; }
-  button { padding: 0 12px; }
+*{box-sizing:border-box}
+:root{--cyan:#00f5ff;--pink:#ff38d1;--muted:#b3b5d0}
+body{margin:0;min-height:100vh;color:#f5f7ff;background:#070713;font-family:Arial,Helvetica,sans-serif;display:flex;flex-direction:column;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background-image:url('background.jpg');background-position:center;background-size:cover;background-repeat:no-repeat;transform:scale(1.02)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(4,4,15,.72),rgba(8,6,28,.78) 45%,rgba(3,3,12,.94)),radial-gradient(ellipse at 50% 45%,rgba(72,30,140,.28),transparent 70%)}
+header{width:100%;padding:22px clamp(18px,5vw,56px);display:flex;align-items:center;gap:13px;border-bottom:1px solid rgba(0,245,255,.18);background:rgba(3,3,12,.38);backdrop-filter:blur(12px)}
+.logo{font-size:34px;line-height:1;color:var(--cyan);text-shadow:0 0 15px #00dfff,0 0 30px #00dfff66}
+.brand{font-size:clamp(18px,4vw,24px);font-weight:800;letter-spacing:3px;color:#fff}
+.tagline{margin-top:6px;color:#b4b4d0;font-size:11px;letter-spacing:2.3px}
+main{width:100%;max-width:780px;margin:auto;padding:clamp(48px,11vh,115px) 20px 70px;text-align:center}
+.eyebrow{display:inline-block;margin-bottom:20px;padding:8px 13px;border:1px solid #00f5ff55;border-radius:30px;color:#a8faff;background:#00eaff0c;font-size:11px;letter-spacing:2px}
+h1{margin:0;font-size:clamp(40px,10vw,76px);line-height:1.08;letter-spacing:-2.5px;background:linear-gradient(95deg,#62faff 5%,#fff 48%,#ff83e6 95%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 30px #00eaff13}
+.subtitle{color:#d0d0e5;font-size:clamp(14px,3.5vw,18px);line-height:1.8;margin:20px 0 34px}
+.search-wrap{padding:7px;border:1px solid #00eaff;border-radius:20px;background:rgba(12,12,32,.84);box-shadow:0 0 16px #00cfff42,0 0 42px #8b00ff26;backdrop-filter:blur(15px)}
+form{display:flex;gap:8px;align-items:stretch}
+input{flex:1;width:0;min-width:0;border:0;outline:0;background:transparent;padding:15px 13px;color:white;font-size:17px}
+input::placeholder{color:#999bb9}
+button{border:0;border-radius:14px;padding:0 20px;color:#050514;background:var(--cyan);font-size:14px;font-weight:800;cursor:pointer;transition:transform .18s,box-shadow .18s}
+button:hover{box-shadow:0 0 22px #00f5ff70}
+button:active{transform:scale(.97)}
+.hint{color:#b1b2ce;font-size:13px;margin-top:18px}
+.shortcuts{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;margin-top:30px}
+.shortcuts button{padding:12px 18px;border-radius:28px;color:#e1e2f7;background:rgba(24,23,48,.84);border:1px solid #7770a04d;font-size:14px;backdrop-filter:blur(8px)}
+.shortcuts button:hover{border-color:var(--pink);color:#ffb3ef}
+.note{margin:42px auto 0;max-width:510px;color:#c0c0d8;font-size:12px;line-height:1.7}
+footer{padding:22px 16px;text-align:center;color:#a0a2c1;font-size:11px;letter-spacing:1px;background:rgba(3,3,12,.35)}
+footer span{color:var(--cyan)}
+@media(max-width:420px){
+header{padding:18px 14px}
+.brand{letter-spacing:2px}
+.tagline{font-size:9px;letter-spacing:1.5px}
+main{padding-top:62px}
+.search-wrap{border-radius:16px}
+input{font-size:15px;padding:13px 8px}
+form button{padding:0 13px;font-size:12px}
+.shortcuts{gap:8px}
+.shortcuts button{padding:10px 14px;font-size:13px}
 }
 </style>
 </head>
-
 <body>
 <header>
-  <div class="logo">✧</div>
+  <div class="logo" aria-hidden="true">✧</div>
   <div>
-    <div class="brand">NOVA SEARCH</div>
-    <div class="tagline">YOUR GATEWAY TO THE WEB</div>
+    <div class="brand">CYBERAYA</div>
+    <div class="tagline">GATEWAY TO THE DIGITAL UNIVERSE</div>
   </div>
 </header>
-
 <main>
+  <div class="eyebrow">✦ YOUR NEXT DISCOVERY STARTS HERE ✦</div>
   <h1>Search beyond.</h1>
-  <p class="subtitle">
-    One universe. Infinite discoveries.<br>
-    What are you looking for?
-  </p>
-
-  <form id="searchForm">
-    <input id="query" type="search"
-      placeholder="Search the universe..."
-      aria-label="Search the web"
-      autocomplete="off" required>
-    <button type="submit">SEARCH ↗</button>
-  </form>
-
-  <div class="hint">Press search or hit Enter to explore.</div>
-
-  <div class="shortcuts">
-    <button type="button" data-query="Technology news">
-      Technology
-    </button>
-    <button type="button" data-query="Space and astronomy">
-      Space
-    </button>
-    <button type="button" data-query="Learn programming">
-      Coding
-    </button>
-    <button type="button" data-query="Artificial intelligence">
-      AI
-    </button>
+  <p class="subtitle">One universe. Infinite discoveries.<br>What are you looking for?</p>
+  <div class="search-wrap">
+    <form id="searchForm">
+      <input id="query" type="search" placeholder="Search the universe..." aria-label="Search the web" autocomplete="off" required>
+      <button type="submit">SEARCH ↗</button>
+    </form>
   </div>
+  <div class="hint">Press search or hit Enter to explore.</div>
+  <div class="shortcuts" aria-label="Popular searches">
+    <button type="button" data-query="Technology news">Technology</button>
+    <button type="button" data-query="Space and astronomy">Space</button>
+    <button type="button" data-query="Learn programming">Coding</button>
+    <button type="button" data-query="Artificial intelligence">AI</button>
+    <button type="button" data-query="Cyberpunk art and science fiction">Cyberpunk</button>
+  </div>
+  <p class="note">A portal to the things you want to discover. Search the web, explore new ideas, and travel beyond the ordinary.</p>
 </main>
-
-<footer>
-  BUILT FOR THE FUTURE · <span>NOVA SEARCH</span>
-</footer>
-
+<footer>BUILT FOR THE FUTURE · <span>CYBERAYA</span></footer>
 <script>
-const form = document.getElementById("searchForm");
-const input = document.getElementById("query");
-
-function searchWeb(query) {
-  const cleanQuery = query.trim();
-  if (!cleanQuery) {
-    input.focus();
-    return;
-  }
-
-  const url =
-    "https://duckduckgo.com/?q=" +
-    encodeURIComponent(cleanQuery);
-
-  window.location.href = url;
+const form=document.getElementById('searchForm');
+const input=document.getElementById('query');
+function searchWeb(query){
+ const clean=query.trim();
+ if(!clean){input.focus();return;}
+ window.location.href='https://duckduckgo.com/?q='+encodeURIComponent(clean);
 }
-
-form.addEventListener("submit", function(event) {
-  event.preventDefault();
-  searchWeb(input.value);
+form.addEventListener('submit',function(event){
+ event.preventDefault();
+ searchWeb(input.value);
 });
-
-document.querySelectorAll("[data-query]").forEach(function(button) {
-  button.addEventListener("click", function() {
-    searchWeb(button.dataset.query);
-  });
+document.querySelectorAll('[data-query]').forEach(function(button){
+ button.addEventListener('click',function(){
+  searchWeb(button.dataset.query);
+ });
 });
 </script>
 </body>
 </html>
-
